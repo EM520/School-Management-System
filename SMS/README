@@ -1,0 +1,29 @@
+School Management System
+
+General Instructions
+ School Management System is an application where students can register for courses,
+  and view the course assigned to them.
+  
+1.Functions:
+# Only students with the right credentials can log in. 
+Otherwise, a message is displayed stating: “Wrong Credentials” 
+with "no student found"and"wrong password" message.Then it allow the user continue to choose option from menu again.
+
+#Valid students are able to see the courses they are registered for.
+Valid students are able to register for any course in the system as long as they are not already registered.
+
+2. Work-Flow:
+#First, run SMSRunner Class first then it will set up the elenastudentcoursedb database with relevant tables and insert
+the dummy data automatically .
+
+#In addition, follow the menu steps to test the functionalities.
+  1. It will show "no student found"if the email is not in the dababase and "wrong password" will be show up when the user 
+     input the wrong password with the right email.
+  2. The user can choose any courses from the "All Courses" List to register to it .
+     If the student has registered the course already , the system will pop out the alert message "The course has been registered already"
+     and let the user choose again..
+  3. The test StudentServiceTest is located in src/test/java/jpa.service which is designed to test getStudentByEmail Method.
+#LogOut, wish you could have a nice user experience.
+
+
+ 

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE hibernate-configuration PUBLIC  
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"  
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<!-- Drop and re-create the database schema on startup -->
+		<property name="hibernate.hbm2ddl.auto"> update </property>
+		<property name="hibernate.hbm2ddl.import_files">Course-1.sql,Student-1.sql,student_courses.sql</property>
+		
+		<property name="connection.autocommit">true</property>
+		<!-- Database connection settings -->
+		<property name="connection.driver_class">org.mariadb.jdbc.Driver</property>
+		<property name="connection.url">jdbc:mariadb://localhost:3308/elenaStudentCoursedb?createDatabaseIfNotExist=true</property>
+		<property name="connection.username">root</property>
+		<property name="connection.password">root</property>
+		<!-- Maria DB dialect -->
+		<property name="dialect">org.hibernate.dialect.MariaDB53Dialect</property>
+		<!-- Echo all executed SQL to stdout -->
+		<property name="hibernate.show_sql">false </property>
+		<property name="hibernate.format_sql">false </property>
+
+		<!-- Mapping entity file -->
+		<mapping class="jpa.entitymodels.Student" />
+		<mapping class="jpa.entitymodels.Course" />
+	</session-factory>
+
+</hibernate-configuration> 
